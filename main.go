@@ -14,11 +14,11 @@ import (
 )
 
 func sendReq(hostname string) string {
-	err, str, _ := curl.String(hostname)
+	err, str, _ := curl.String(hostname,"timeout=2")
 	if err != nil {
 		return ""
 	}
-	err, _, _ = curl.Bytes(hostname)
+	err, _, _ = curl.Bytes(hostname,"timeout=2")
 	if err != nil {
 		return ""
 	}
@@ -36,7 +36,7 @@ func otherMethods(hostname string) string {
 		hostname, cb, "method=", "POST",
 		"data=", strings.NewReader("{\"asd\": \"test\"}"),
 		"disablecompression=", true,
-		"header=", http.Header{"X-My-Header": {"laravelN00b"}},
+		"header=", http.Header{"X-My-Header": {"laravelN00b"}},"timeout=2",
 	)
 
 	return str
