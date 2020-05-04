@@ -149,13 +149,13 @@ func main() {
 		} else {
 			s.Restart()
 			fmt.Printf("\033[1;36m%s\033[0m", "* Laravel Debug Mode Active send POST or PUT and read .env Variables. \n\n")
-			fmt.Printf("\033[1;36m%s\033[0m", "Example curl Command:\ncurl -X POST https://"+*hostname+" | grep APP_\n\n\n")
+			fmt.Printf("\033[1;36m%s\033[0m", "Example env Found curl Command:curl -X POST https://"+*hostname+" | grep APP_\n\n\n")
 		}
 
 	} else {
 		s.Restart()
 		fmt.Printf("\033[1;36m%s\033[0m", "* Laravel Debug Mode Active send POST or PUT and read .env Variables. \n\n")
-		fmt.Printf("\033[1;36m%s\033[0m", "Example curl Command:\ncurl -X POST http://"+*hostname+" | grep APP_\n\n\n")
+		fmt.Printf("\033[1;36m%s\033[0m", "Example env Found curl Command:curl -X POST http://"+*hostname+" | grep APP_\n\n\n")
 	}
 
 	s.Restart()
