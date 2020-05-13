@@ -1,3 +1,4 @@
+# 添加了超时时间与关键匹配
 # laravelN00b
 Incorrect configuration allows you to access .env files or reading env variables. LaravelN00b automated scan .env files and checking debug mode in victim host.
 
